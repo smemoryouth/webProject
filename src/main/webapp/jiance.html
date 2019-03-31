@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--给当前页面添加css代码-->
+    <style type="text/css">
+        span{
+            color: black;
+            background-color: red !important;
+        }
+
+        img{
+            border-radius: 50%;
+            /*border-color: red;*/
+            border: 2px solid red;
+        }
+
+        #id01{
+            color: yellow ;
+            background-color: red !important;
+        }
+        /*$("#id01")  $(".class01")*/
+        .class01{
+            font-size: 10px;
+        }
+
+        .class02{
+            color: green;
+        }
+    </style>
+    <!--链接外部的css文件-->
+    <!--<link rel="stylesheet" type="text/css" href="">-->
+</head>
+<body>
+<!--
+    html:页面内容的显示
+    元素的概念
+    标签的概念
+    元素的属性
+    <h1>....  <br>  <p>  <a>
+
+     css：页面内容的效果
+     1.元素内联的CSS  在标签添加属性style
+     2.当前页面的CSS  写在页面的<head></head>
+     3.外部的CSS     链接到当前的文件中，写在页面的<head></head>
+     1 > 2 > 3  <= 覆盖的关系
+
+     javascript: 在浏览器上运行的脚本代码
+                  页面内容的动作
+     html元素的显示有两种：
+     1. 块级元素   后面会自动换行  <div>  <h>
+     2. 内联元素   不会换行       <a> <span>
+-->
+<h1>这是h1</h1>
+<h2>这是一块简单的文字描述，并不代表
+    当前页面的主题内容</h2>
+<h3>这是h3</h3>
+
+<a href="http://www.baidu.com/" target="_blank">百度主页</a>
+<!--<br/> 闭合标签-->
+<p>
+    <a href="http://www.taobao.com/">淘宝主页</a>
+</p>
+
+<p>
+    <span style="color: brown; background-color: bisque; font-size: 80px; font-weight: bold;">请继续阅读第二段内容：</span><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;我是一个新的段落文字，我想要一些效果
+</p>
+
+<img src="C:\Users\阿劼\Pictures\Saved Pictures/下载.jpg"
+     alt=”图片无法显示” width="400" height="300"/>
+
+<hr style="height: 5px;background-color: green; width: 50%;"/>
+
+<p/>
+
+<span id="id01">我是一段特殊的内容，想要一个特殊的样式</span>
+<span class="class01">我是一段特殊的内容，想要一个特殊的样式</span>
+<span class="class02 class01">我是一段特殊的内容，想要一个特殊的样式</span>
+
+
+<!--引入外部的js文件<script src="index.js"></script>-->
+<script src="assets/js/jquery-1.12.0.min.js"></script>
+<script>
+    // 定义变量 javascript => js 弱类型语言
+    // 有两个作用域  全局作用域  函数的局部作用域
+    var a = 10;
+
+    // js的函数
+    function js_func1(){
+        var b = 20;
+    }
+
+    $(document).ready(function () {
+        // text():获取普通元素的内容
+        // val()：获取表单输入框的内容
+        var str = $("#id01").text();
+        alert(str);
+
+        // $("#id01").click(function () {
+        //     $("#id01").text("");
+        // });
+        //
+        // $("#id01").dbclick(function () {
+        //     $("#id01").text("");
+        // });
+    });
+
+</script>
+</body>
+</html>

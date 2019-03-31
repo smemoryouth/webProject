@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>演示div</title>
+
+    <style>
+        /*html body 自定义的标签选择*/
+        html {
+            border: 1px solid green;
+        }
+
+        body {
+            border: 1px solid red;
+        }
+
+        #content {
+            min-height: 400px;
+            border: 1px solid yellow;
+            /*margin: 20px;*/
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        #title {
+            height: 80px;
+            background-color: gainsboro;
+            border: 1px solid black;
+            /*这是左右居中对齐*/
+            text-align: center;
+            /*下面三种1.3组合能实现左右居中，1.2.3组合能实现上下左右居中对齐*/
+            /*设置字的行高与区块一样高，只要是上面的一句就能居中*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /*width: 200px;*/
+            /*display: inline;*/
+        }
+
+        #menu {
+            min-height: 600px;
+            border: 1px solid black;
+            width: 200px;
+            float: left;
+            /*这行不要了，要了会左右岔开5px*/
+            /*margin-top: 5px;*/
+
+            /*display: inline; 内联元素无法设置宽度*/
+            /*CSS元素有四种浮动方式*/
+        }
+
+        #maincontent {
+            min-height: 600px;
+            border: 1px solid royalblue;
+            /*width: 200px;*/
+            /*display: inline;*/
+            margin-left: 202px;
+            margin-top: 5px;
+        }
+
+        #footer {
+            height: 70px;
+            border: 1px solid black;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /*width: 200px;*/
+            /*display: inline;*/
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<!--DIV + CSS-->
+<div id="content">
+    <div id="title">
+        <!--
+        在title的中间显示标题，欢迎访问xxxxx主页
+        div本身：高度 80px  背景灰色
+         字体：50px red 文字左右上下都居中
+         align: center 没用-->
+        <span style="color:red; font-size: 50px; line-height: 80px">欢迎访问图论科技主页</span><br/>
+    </div>
+
+    <!--div main 设置背景色 设置最小的显示高度是600px 和上面的title稍留一些距离5px-->
+    <div id="main">
+        <div id="menu">
+        </div>
+        <div id="maincontent">
+        </div>
+    </div>
+
+    <!--离上面的main5px， 高度合适， 背景色是黑色，
+    字体是白色 图论科技有限公司2007-2018 @Copyright 版权所有 违者必究-->
+    <div id="footer">
+        <span style="color:white; font-size: 20px;">图论科技有限公司&nbsp;&nbsp;&nbsp;2007-2018&nbsp;@Copyright&nbsp;&nbsp;&nbsp;版权所有&nbsp;违者必究</span><br/>
+    </div>
+</div>
+</body>
+</html>
